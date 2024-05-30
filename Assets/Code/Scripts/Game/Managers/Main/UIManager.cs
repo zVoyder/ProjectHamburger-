@@ -35,7 +35,7 @@
         private void OnDisable()
         {
             EventManager.Ins.RemoveListener(EventKeys.GameEvents.OnEatPhase, EnableLevelCompletedPanel);
-            EventManager.Ins.AddListener(EventKeys.GameEvents.OnGameVictory, DisableBottomInGameMenu);
+            EventManager.Ins.RemoveListener(EventKeys.GameEvents.OnGameVictory, DisableBottomInGameMenu);
             EventManager.Ins.RemoveListener(EventKeys.GameEvents.OnGameBegin, OnGameBegin);
         }
 
